@@ -72,6 +72,10 @@ body {
         color: #aaaaaa; }
     .post .post-content p {
       margin: 0; }
+    .post .post-content .quote {
+      margin: 0; 
+      font-size: 18px; 
+      margin-bottom: 5px; }
   .post .discuss {
     display: block;
     float: right;

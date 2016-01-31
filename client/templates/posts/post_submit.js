@@ -16,12 +16,11 @@ Template.postSubmit.events({
     e.preventDefault();
     
     var post = {
-      url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      quote: $(e.target).find('[name=quote]').val(),
     };
     
     var errors = validatePost(post);
-    if (errors.title || errors.url)
+    if (errors.quote)
       return Session.set('postSubmitErrors', errors);
     
     Meteor.call('postInsert', post, function(error, result) {
@@ -31,7 +30,7 @@ Template.postSubmit.events({
       
       // show this result but route anyway
       if (result.postExists)
-        throwError('This link has already been posted');
+        throwError('This has already been posted');
       
       Router.go('postPage', {_id: result._id});  
     });
