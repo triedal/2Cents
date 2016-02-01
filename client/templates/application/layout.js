@@ -13,3 +13,12 @@ Template.layout.onRendered(function() {
     }
   }
 });
+
+Template.layout.helpers({
+  'showSubmit': function(){
+    var pathName = Router.current().route.getName();
+    if (pathName !== "newPosts" && pathName !== "bestPosts" && pathName !== "postPage" && pathName !== "home") {
+      return true;
+    }
+  }
+});

@@ -2,6 +2,9 @@
   <div class="container">
     {{> header}}
     {{> errors}}
+    {{#if showSubmit}}
+      {{> postSubmit}}
+    {{/if}}
     <div id="main">
       {{> yield}}
     </div>

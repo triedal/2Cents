@@ -17,6 +17,7 @@ Template.postSubmit.events({
     
     var post = {
       quote: $(e.target).find('[name=quote]').val(),
+      tag: Router.current().route.getName().slice(0,-5)
     };
     
     var errors = validatePost(post);
