@@ -17,7 +17,15 @@ Template.layout.onRendered(function() {
 Template.layout.helpers({
   'showSubmit': function(){
     var pathName = Router.current().route.getName();
-    if (pathName !== "newPosts" && pathName !== "bestPosts" && pathName !== "postPage" && pathName !== "home") {
+    if (pathName !== "newPosts" && pathName !== "bestPosts" && pathName !== "postPage" && 
+        pathName !== "home" && pathName !== "postEdit" && pathName !== "about") {
+      return true;
+    }
+  },
+
+  'showFooter': function(){
+    var pathName = Router.current().route.getName()
+    if (pathName !== "about") {
       return true;
     }
   }

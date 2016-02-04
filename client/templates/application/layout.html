@@ -3,10 +3,17 @@
     {{> header}}
     {{> errors}}
     {{#if showSubmit}}
+    {{#if currentUser}}
       {{> postSubmit}}
+    {{/if}}
     {{/if}}
     <div id="main">
       {{> yield}}
+    </div>
+    <div id="footer">
+    {{#if showFooter}}
+      {{> footer}}
+    {{/if}}
     </div>
   </div>
 </template>

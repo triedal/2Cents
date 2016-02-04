@@ -29,7 +29,7 @@ Template.postSubmit.events({
       if (error)
         return throwError(error.reason);
       
-      // show this result but route anyway
+      // show this result but route anywa
       if (result.postExists)
         throwError('This has already been posted');
       

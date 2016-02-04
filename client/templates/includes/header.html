@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{pathFor 'home'}}">Microscope</a>
+      <a class="navbar-brand" href="{{pathFor 'home'}}">2Cents</a>
     </div>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
@@ -20,14 +20,17 @@
         <li class="{{activeRouteClass  'careerPosts'}}">
           <a href="{{pathFor 'careerPosts'}}">Career</a>
         </li>
-        <li>
-          <a href="">School</a>
+        <li class="{{activeRouteClass 'financePosts'}}">
+          <a href="{{pathFor 'financePosts'}}">Finance</a>
         </li>
-        <li>
-          <a href="">Relationships</a>
+        <li class="{{activeRouteClass 'schoolPosts'}}">
+          <a href="{{pathFor 'schoolPosts'}}">School</a>
         </li>
-        <li>
-          <a href="">Misc</a>
+        <li class="{{activeRouteClass 'relationshipPosts'}}">
+          <a href="{{pathFor 'relationshipPosts'}}">Relationships</a>
+        </li>
+        <li class="{{activeRouteClass 'miscPosts'}}">
+          <a href="{{pathFor 'miscPosts'}}">Misc</a>
         </li>
         {{#if currentUser}}
           <li class="dropdown">
